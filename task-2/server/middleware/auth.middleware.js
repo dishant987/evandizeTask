@@ -1,18 +1,38 @@
 import jwt from "jsonwebtoken";
+import { User } from "../models/user.js";
 
-const authMiddleware = (req, res, next) => {
-  const token =
-    req.cookies.token || req.header("Authorization").replace("Bearer ", "");
-
-  if (!token) return res.status(401).send("Access Denied. No token provided.");
-
+export const verifyJWT = async (req, res, next) => {
   try {
-    const verified = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = verified;
+    const token =
+      req.cookies?.accessToken ||
+      req.header("Authorization")?.replace("Bearer ", "");
+    console.log(token);
+    if (!token) {
+      return res.json({
+        statuscode: 401,
+        message: "Unauthorized request",
+      });
+    }
+
+    const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+    // console.log(decodedToken);
+    const user = await User.findById(decodedToken._id).select(
+      "-password "
+    );
+    if (!user) {
+      return res.json({
+        statuscode: 401,
+        message: "Invalid Access Token",
+      });
+    }
+
+    req.user = user;
     next();
-  } catch (err) {
-    res.status(400).send("Invalid Token");
+  } catch (error) {
+    console.error(error);
+    res.json({
+      statuscode: 500,
+      message: error?.message || "Invalid Access Token",
+    });
   }
 };
-
-export default authMiddleware;
