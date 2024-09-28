@@ -28,12 +28,10 @@ Ensure you have the following installed:
    git clone https://github.com/your-repo-name.git
    cd your-repo-name
 
- Start Development Server:
+Start Development Server:
 
- ```bash
-    npm run dev
-
-2. App Structure:
+    ```bash npm run dev
     
+
 
 
