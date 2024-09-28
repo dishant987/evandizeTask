@@ -1,11 +1,39 @@
-# React + Vite
+# Task 1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a React application built with Vite, showcasing a simple layout that includes a header, venue section, and main images. The application utilizes Tailwind CSS for styling and is configured to support ESLint for code quality.
 
 
-deploy link="https://evandize-task.vercel.app/"
+
+## Overview
+
+The app provides:
+
+- **React** for building user interfaces.
+- **Vite** as the build tool and development server.
+- **Tailwind CSS** for responsive and utility-first styling.
+- **ESLint** for maintaining code quality.
+
+## Prerequisites
+
+Ensure you have the following installed:
+
+- **Node.js** (v14 or higher)
+- **NPM** or **Yarn**
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-repo-name.git
+   cd your-repo-name
+
+ Start Development Server:
+
+ ```bash
+    npm run dev
+
+2. App Structure:
+    
+
+
