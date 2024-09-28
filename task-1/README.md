@@ -40,5 +40,10 @@ Start Development Server:
 
      npm run dev
 
+## Deployment
+
+Demo link : https://evandize-task.vercel.app/
+
+
 
 
