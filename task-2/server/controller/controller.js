@@ -99,7 +99,7 @@ export const signIn = async (req, res) => {
       $or: [{ email }, { password }],
     });
 
-    if (user.googleId) {
+    if (user?.googleId) {
       return res.status(400).json({
         statuscode: 400,
         message: "This account is registered with Google. Please sign in using Google.",
