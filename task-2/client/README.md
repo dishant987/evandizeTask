@@ -30,7 +30,6 @@ Ensure you have the following installed:
    git clone https://github.com/your-repo-name.git
    cd your-repo-name
 2. Install dependencies:
+    ```bash
+   npm install
 
-   ```npm install
-
-   cd your-repo-name
