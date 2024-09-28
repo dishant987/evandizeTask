@@ -33,3 +33,27 @@ Ensure you have the following installed:
     ```bash
    npm install
 
+
+## Theme Management
+
+The app features dynamic theme management (light/dark modes) using:
+
+- Material UI's ThemeProvider: To provide light and dark themes.
+- Custom useTheme Hook: For theme mode switching.
+
+## Routing
+
+The app uses React Router DOM for client-side routing. The following routes are configured::
+- /: Login page.
+- /login: Login page.
+- /signup: Signup page.
+- /profile: User profile page.
+
+## Components
+- Login: Handles user login.
+- SignUp: Manages user registration.
+- UserProfile: Displays the user's profile.
+- Navbar: The navigation bar across the app.
+- Toaster: Manages notifications throughout the app.
+- CookiesProvider: Wraps the app for managing cookies.
+
