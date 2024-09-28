@@ -38,5 +38,7 @@ The main components of the application include:
 
 Start Development Server:
 
-    ```bash npm run dev
+     npm run dev
+
+
 
