@@ -33,8 +33,8 @@ Ensure you have the following installed:
 
 ## Install dependencies: 
  
-    ```bash npm install
-```
+    npm install
+
 
 ## Environment Variables:
 
