@@ -40,12 +40,12 @@ Ensure you have the following installed:
 
 Create a .env file at the root of your project with the following values:
 
-PORT=3000
-DOMAIN=http://localhost:3000
-MONGO_URI=mongodb://localhost:27017/your-database-name
-JWT_SECRET=your_jwt_secret
-GOOGLE_CLIENT_ID=your_google_client_id
-GOOGLE_CLIENT_SECRET=your_google_client_secret
+- PORT=3000
+- DOMAIN=http://localhost:3000
+- MONGO_URI=mongodb://localhost:27017/your-database-name
+- JWT_SECRET=your_jwt_secret
+- GOOGLE_CLIENT_ID=your_google_client_id
+- GOOGLE_CLIENT_SECRET=your_google_client_secret
 
 ## API Routes:
 
