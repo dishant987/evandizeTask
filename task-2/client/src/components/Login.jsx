@@ -65,7 +65,11 @@ export default function Login() {
                     return toast.error(error.response.data.message);
                 } else if (error.response.status === 401 && error.response.data.message === "Invalid User credentials") {
                     return toast.error(error.response.data.message);
-                } else {
+                }
+                else if (error.response.status === 400 && error.response.data.message === "This account is registered with Google. Please sign in using Google.") {
+                    return toast.error(error.response.data.message);
+                }
+                else {
                     return toast.error("An unexpected error occurred.");
                 }
             } else {

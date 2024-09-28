@@ -22,7 +22,7 @@ function Navbar() {
   const { mode, toggleColorMode } = useTheme();
   const [open, setOpen] = useState(false);
   const [cookies, , removeCookie] = useCookies(['accessToken']);
-
+ 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
@@ -45,12 +45,12 @@ function Navbar() {
   const handleSignOut = async () => {
 
     try {
-      const response = await axios.post(`$${import.meta.env.VITE_BACKEND_URI}/api/users/logout`, {}, { withCredentials: true });
-      console.log(response.data)
+      const response = await axios.post(`${import.meta.env.VITE_BACKEND_URI}/api/users/logout`, {}, { withCredentials: true });
+    
       if (response.data.statuscode === 200 && response.data.message === "User Logged Out") {
         toast.success(response.data.message);
         removeCookie('accessToken');
-        window.location.href = '/';
+       
       }
     } catch (error) {
       console.log(error)

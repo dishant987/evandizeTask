@@ -99,13 +99,20 @@ export const signIn = async (req, res) => {
       $or: [{ email }, { password }],
     });
 
+    if (user.googleId) { // Assuming `isGoogleUser` is a field indicating Google OAuth registration
+      return res.status(400).json({
+        statuscode: 400,
+        message: "This account is registered with Google. Please sign in using Google.",
+      });
+    }
+
     if (!user) {
       return res.status(404).json({
         statuscode: 404,
         message: "User does not exist",
       });
     }
-   
+
 
     const isPasswordValid = await user.isPasswordCorrect(password);
     if (!isPasswordValid) {

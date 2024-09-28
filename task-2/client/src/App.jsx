@@ -37,14 +37,14 @@ const App = () => {
       path: "/profile",
       element: <UserProfile />,
     },
-    
+
   ]);
 
   return (
     <MUIThemeProvider theme={defaultTheme}>
       <CookiesProvider>
         <CssBaseline />
-        <Navbar  />
+        <Navbar />
         <RouterProvider router={router} />
         <Toaster
           position="top-right"
@@ -55,7 +55,7 @@ const App = () => {
           }}
         />
       </CookiesProvider>
-      </MUIThemeProvider>
+    </MUIThemeProvider>
   );
 };
 

@@ -5,10 +5,12 @@ import cookieParser from "cookie-parser";
 import router from "./router/route.js";
 import connect from "./database/conn.js";
 
+config();
+
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: process.env.DOMAIN,
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "x-csrf-token"],
@@ -24,7 +26,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 // app.use(express.static("public"))
 
-config();
+
 
 connect()
   .then(() => {
