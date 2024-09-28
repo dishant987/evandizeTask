@@ -20,6 +20,14 @@ Ensure you have the following installed:
 - **Node.js** (v14 or higher)
 - **NPM** or **Yarn**
 
+## Components
+
+The main components of the application include:
+
+- Header: Displays the header section of the app.
+- Venue: Shows venue details.
+- MainImages: Displays main images related to the venue.
+
 ## Installation
 
 1. Clone the repository:
@@ -31,7 +39,4 @@ Ensure you have the following installed:
 Start Development Server:
 
     ```bash npm run dev
-    
-
-
 
